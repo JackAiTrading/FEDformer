@@ -1,0 +1,48 @@
+# 环境配置
+window_size: 512  # 窗口大小
+indicator_window_max: 60  # 指标窗口最大值
+
+# 支持的交易对
+symbols:
+  - ETHUSDT
+  - BTCUSDT
+#  - BNBUSDT
+
+# 代理类型
+agent_types:
+  - "AgentMulti"
+
+# 交易模式
+trading_modes:
+  - "simulation"
+  - "binance"
+
+# 交易配置
+trading_interval: 60 # 交易间隔(秒)
+margin_type: "ISOLATED" # 保证金模式
+stop_loss_ratio: 0.05 # 止损比例
+take_profit_ratio: 0.1 # 止盈比例
+volatility_adjustment: true # 是否自动调整波动性
+
+# 日志配置
+log_interval: 1       # 每步都记录
+verbose: 1            # 显示详细日志
+monitor_wrapper: true # 启用监控包装器
+tensorboard_log: "storage/tensorboard_log"  # TensorBoard日志目录
+
+# 目录配置
+root_dir: "${ROOT_DIR}"
+log_dir: "storage/logs"
+cache_dir: "storage/cache"
+model_dir: "storage/models"
+data_dir: "resource/data"
+template_dir: "web/templates"
+
+# Binance API配置 (如果需要实盘交易)
+binance:
+  api_key: "${BINANCE_API_KEY}"
+  api_secret: "${BINANCE_API_SECRET}"
+  testnet: "${BINANCE_API_TYPE}"
+
+# 钉钉通知配置
+dingding_token: "${DINGDING_TOKEN}"

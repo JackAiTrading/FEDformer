@@ -1,0 +1,44 @@
+
+# 交易配置
+symbol: "ETHUSDT"  # 交易对
+
+# 代理类型
+agent_type: "AgentMulti"  #
+
+# 交易模式
+trading_mode: "backtest" #  simulation,binance
+
+# 环境配置
+initial_balance: 10000.0 # 初始资金
+
+# 交易配制
+leverage: 5 # 杠杆倍数
+max_position_size: 0.9 # 最大持仓
+position_scaling: 1.0 # 持仓比例
+
+# 策略配置
+policy:
+  trading: "transformer"
+
+# 训练配制
+train:
+  seed: 42
+  n_envs: 16
+  total_timesteps: 10000000
+  eval_freq: 10000
+  save_freq: 50000
+
+  # 模型配置
+  learning_rate: 0.0003  # 恢复较高的学习率
+  batch_size: 2048      # 减小批量大小
+
+  n_steps: 2048         # 减小步数
+  n_epochs: 10          # 增加训练轮数
+  gamma: 0.99          # 恢复原始折扣因子
+  gae_lambda: 0.95     # 恢复原始GAE lambda
+  clip_range: 0.2      # 增加裁剪范围
+  ent_coef: 0.01       # 增加熵系数以增加探索
+  vf_coef: 0.5         # 减小值函数系数
+  max_grad_norm: 0.5   # 增加梯度裁剪阈值
+  normalize: true      # 是否归一化数据
+  months: 0            # 加载数据的月份数 0:不限制
