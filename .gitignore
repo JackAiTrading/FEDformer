@@ -57,3 +57,6 @@ resource/tensorboard_logs
 resource/logs
 resource/models
 /.ipynb_checkpoints/
+resource/data/all_six_datasets
+ECL.csv
+WTH.csv
