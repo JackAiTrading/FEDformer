@@ -34,7 +34,7 @@ def main():
 
     # 数据加载配置
     parser.add_argument('--data', type=str, default='ETTh1', help='数据集类型')
-    parser.add_argument('--root_path', type=str, default='./dataset/ETT/', help='数据文件根目录路径')
+    parser.add_argument('--root_path', type=str, default='./resource/dataset/ETT-small/', help='数据文件根目录路径')
     parser.add_argument('--data_path', type=str, default='ETTh1.csv', help='数据文件名')
     parser.add_argument('--features', type=str, default='M',
                         help='预测任务类型，可选:[M, S, MS]; M:多变量预测多变量, '

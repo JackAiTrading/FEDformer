@@ -25,16 +25,12 @@ storage/*
 *.log
 
 # Models
-
 *.h5
 *.pkl
 *.joblib
 
 # Data
 *.parquet
-
-# TensorBoard
-resource/tensorboard/
 
 # Environment
 .env
@@ -52,11 +48,12 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
-resource/tensorboard_logs
-/.ipynb_checkpoints/test_env-checkpoint.ipynb
-resource/logs
-resource/models
+
+# TensorBoard
+/resource/tensorboard/
+/resource/tensorboard_logs
 /.ipynb_checkpoints/
-resource/data/all_six_datasets
-ECL.csv
-WTH.csv
+/resource/dataset/
+/resource/data/
+/resource/logs
+/resource/models
